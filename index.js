@@ -44,9 +44,9 @@ async function run(){
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('Hello From Doctor Uncle!')
+    res.send('Opu traders!')
   })
   
   app.listen(port, () => {
-    console.log(`Doctors App listening on port ${port}`)
+    console.log(`Opu traders ${port}`)
   })
