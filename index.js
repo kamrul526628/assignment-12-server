@@ -16,6 +16,7 @@ async function run(){
     try{
         await client.connect();
         const toolCollection = client.db('assignment_12').collection('tools');
+        const reviewCollection = client.db('assignment_12').collection('reviews');
 
         app.get('/tool', async(req, res) =>{
             const query = {};
@@ -23,8 +24,8 @@ async function run(){
             const tools = await cursor.toArray();
             res.send(tools);
         })
-        await client.connect();
-        const reviewCollection = client.db('assignment_12').collection('reviews');
+        
+        
 
         app.get('/review', async(req, res) =>{
             const query = {};
